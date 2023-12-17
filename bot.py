@@ -11,7 +11,6 @@ import requests
 
 intents = discord.Intents.default()
 
-# Create the Bot instance with intents
 bot = commands.Bot(command_prefix='/', intents= intents)
 
 
@@ -29,7 +28,6 @@ async def fortnite_stats(interaction: discord.Interaction,player_name: str):
 
     response = requests.get(API_ENDPOINT, headers={'Authorization': API_KEY}, params={'name': player_name})
 
-    # Check if the request was successful (status code 200)
     if response.status_code == 200:
         data = response.json()
         player_name = data['data']['account']['name']
@@ -93,13 +91,10 @@ async def nba_player_stats(interaction: discord.Interaction, player_name: str):
 
     await interaction.response.send_message(response)
 
-    
-    
-
-# Replace 'YOUR_BOT_TOKEN' with your actual bot token
-bot.run('MTE4NTUyNjY0ODQxNDY3NDk5NA.GBlYd9.laUJMcjBv34t5NbMSNHl5QCfODGbnsP_nPBw5Q')
 
 @bot.tree.command(name="nba_team_season_stats")
-async def nba_team_season_stats(interaction: discord.Interaction, team_name: str)
+async def nba_team_season_stats(interaction: discord.Interaction, team_name: str):
     
     await interaction.response.send_message("Coming Soon!!!")
+
+bot.run('MTE4NTUyNjY0ODQxNDY3NDk5NA.GBlYd9.laUJMcjBv34t5NbMSNHl5QCfODGbnsP_nPBw5Q')
