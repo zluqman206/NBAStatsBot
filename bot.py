@@ -92,9 +92,10 @@ async def nba_player_stats(interaction: discord.Interaction, player_name: str):
     await interaction.response.send_message(response)
 
 
+
 @bot.tree.command(name="nba_team_season_stats")
 async def nba_team_season_stats(interaction: discord.Interaction, team_name: str):
     
     await interaction.response.send_message("Coming Soon!!!")
 
-bot.run('MTE4NTUyNjY0ODQxNDY3NDk5NA.GBlYd9.laUJMcjBv34t5NbMSNHl5QCfODGbnsP_nPBw5Q')
+bot.run('MTE4NTUyNjY0ODQxNDY3NDk5NA.GMJ9xm.nxCRLzu8bRERs6TLWhtewBX50Mj3jWz7nYd7jo')
